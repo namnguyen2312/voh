@@ -501,7 +501,7 @@ th.ui-datepicker-week-end:first-child{
     border-image: block;
     border-style: solid;
     border-width: 2px 1px 1px;
-    display: none;
+    display: block;
     left: 0;
     right: 0;
     position: absolute;
@@ -511,6 +511,7 @@ th.ui-datepicker-week-end:first-child{
     float: left;
     z-index: 1000;
     margin: 0 auto;
+    overflow: hidden;
 }
 .menuwrap .menubox ul {
     padding-left: 0;
@@ -553,6 +554,15 @@ th.ui-datepicker-week-end:first-child{
 }
 .level0:hover .menuwrap {
     display: block;
+}
+.menuwrap .menu-slider {
+    width: 3000px;
+}
+.menuwrap .menu-slider .menubox-slider {
+    width: 185px;
+    float: left;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 /*hot news*/
 #hotnews{
