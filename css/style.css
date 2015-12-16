@@ -556,7 +556,28 @@ th.ui-datepicker-week-end:first-child{
     display: block;
 }
 .menuwrap .menu-slider {
-    width: 3000px;
+    width: 9999px;
+    /*left:-205px;*/ /* important (this should be negative number of list items width(including margin) */  
+    list-style-type: none; /* removing the default styling for unordered list items */  
+    margin: 0px;  
+    padding: 0px;
+    position: relative;
+}
+.menuwrap a.left,
+.menuwrap a.right {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    position: absolute;
+}
+
+.menuwrap a.left {
+    left: 0;
+    bottom: 50%;
+}
+.menuwrap a.right {
+    right: 0;
+    bottom: 50%;
 }
 .menuwrap .menu-slider .menubox-slider {
     width: 185px;

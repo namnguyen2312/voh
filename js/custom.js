@@ -75,20 +75,29 @@
     };
 
 
+    //menu slider 
+        var key_slide = 1;
+        
+        //speed of auto slide(
+        var auto_slide_seconds = 5000;
 
+        //check if key sliding is enabled
+        if(key_slide == 1){
+            
+            //binding keypress function
+            $(document).bind('keypress', function(e) {
+                //keyCode for left arrow is 37 and for right it's 39 '
+                if(e.keyCode==37){
+                        //initialize the slide to left function
+                        slide('left');
+                }else if(e.keyCode==39){
+                        //initialize the slide to right function
+                        slide('right');
+                }
+            });
 
-    $( "#inputDate" ).datepicker({
-        dateFormat: 'dd/mm/yy',
-        changeMonth: true,
-        changeYear: true,
-        showOtherMonths: true,
-            selectOtherMonths: true,
-            monthNamesShort: ['Tháng 1', 'Tháng 2', 'Tháng 3', 'Tháng 4', 'Tháng 5', 'Tháng 6', 'Tháng 7', 'Tháng 8', 'Tháng  9', 'Tháng 10', 'Tháng 11', 'Tháng 12'],
-        dayNames: ['Chủ nhật', 'Thứ 2', 'Thứ 3', 'Thứ 4', 'Thứ 5', 'Thứ 6', 'Thứ 7'],
-        dayNamesMin: ['CN', 'T2', 'T3', 'T4', 'T5', 'T6', 'T7'],
-        monthNames: ['Tháng 1', 'Tháng 2', 'Tháng 3', 'Tháng 4', 'Tháng 5', 'Tháng 6', 'Tháng 7', 'Tháng 8', 'Tháng  9', 'Tháng 10', 'Tháng 11', 'Tháng 12']
-    });
-     
+        }
+
     //$('#menu_offcanvas').html($('#dmenu').html());            
     //$('#mmenu').find('li > .wrap_submenu > ul').unwrap();
     $('#menu_offcanvas').Accordion({
@@ -127,4 +136,37 @@
     //thêm nội dung vào footer
     $('#footer .container').html('<p class="ftcontent">ĐÀI TIẾNG NÓI NHÂN DÂN THÀNH PHỐ HỒ CHI MINH<br>GIỚI THIỆU | TỶ GIÁ VÀNG | GIÁ CHỨNG KHOÁN | LIÊN KẾT WEBSITE<br> số 3 Nguyễn Đình Chiểu, Quận 1, Tp. Hồ Chí Minh Tel: (84.8)38225933 - Fax: (84.8)38225933</p>')
 
-})(jQuery);; 
+})(jQuery);
+
+//slide function  
+function slide(where){
+    
+            //get the item width
+          //  var listitem_width = $('.menuwrap').outerWidth();
+            var item_width = $('.menu-slider .menubox-slider').outerWidth();
+            if(where == 'left') {
+                var left_indent = parseInt($('menu-slider').css('left')) + item_width;
+               
+            }else {
+                var left_indent = parseInt($('menu-slider').css('left')) - item_width;
+            }
+            
+            //make the sliding effect using jQuery's animate function... '
+            $('.menu-slider:not(:animated)').animate({'left' : left_indent},100,function(){    
+                
+                if(where == 'left'){
+                
+                        $('.menu-slider').css('left',item_width);
+                   
+                }else{
+                    if (item_width == listitem_width) {
+                        alert(item_width);
+                        $('.menu-slider').css('left',-listitem_width);
+                    } else {
+                        alert('vao day');
+                        return false;
+                    }
+                }
+            });
+           
+}
