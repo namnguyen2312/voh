@@ -154,19 +154,16 @@ function slide(where){
             //make the sliding effect using jQuery's animate function... '
             $('.menu-slider:not(:animated)').animate({'left' : left_indent},100,function(){    
                 
-                if(where == 'left'){
-                
-                        $('.menu-slider').css('left',item_width);
-                   
-                }else{
-                    if (item_width == listitem_width) {
-                        alert(item_width);
-                        $('.menu-slider').css('left',-listitem_width);
-                    } else {
-                        alert('vao day');
-                        return false;
-                    }
-                }
+                if(where == 'left'){  
+                    //...and if it slided to left we put the last item before the first item  
+                    $('.menu-slider div.menubox-slider:first').before($('.menu-slider div.menubox-slider:last'));  
+                }else{  
+                    //...and if it slided to right we put the first item after the last item  
+                    $('.menu-slider div.menubox-slider:last').after($('.menu-slider div.menubox-slider:first'));  
+                }  
+  
+                //...and then just get back the default left indent  
+                $('.menu-slider').css({'left' : '-210px'});  
             });
            
 }
