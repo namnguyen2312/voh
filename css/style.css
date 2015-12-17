@@ -659,7 +659,7 @@ a.fm-cam {
 .hot-news-right{}
 @media (min-width: 1200px) { 
    #logotext{
-       padding-top: 25px;
+       padding-top: 15px;
    } 
    #hdads{
         display:inline-block;
@@ -687,6 +687,9 @@ a.fm-cam {
     }
     .menuwrap .menubox-img {
     margin-left: 1em;
+    }
+    .center-img {
+        margin: 0 auto;
     }
 }
 @media (max-width: 983px) {
