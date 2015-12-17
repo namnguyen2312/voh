@@ -135,6 +135,20 @@
     
     //thêm nội dung vào footer
     $('#footer .container').html('<p class="ftcontent">ĐÀI TIẾNG NÓI NHÂN DÂN THÀNH PHỐ HỒ CHI MINH<br>GIỚI THIỆU | TỶ GIÁ VÀNG | GIÁ CHỨNG KHOÁN | LIÊN KẾT WEBSITE<br> số 3 Nguyễn Đình Chiểu, Quận 1, Tp. Hồ Chí Minh Tel: (84.8)38225933 - Fax: (84.8)38225933</p>')
+	
+	//radio
+    $('#ul-radio > li > a.show-cat').click(function(){
+        $('#ul-radio li ul').slideUp();
+        if (!$(this).hasClass('active')){                 
+          $(this).next().slideToggle();
+          $('#ul-radio li a.show-cat').removeClass('active');
+          $(this).addClass('active');
+        }
+        else if ($(this).hasClass('active')) {
+            $(this).removeClass('active');
+        }
+        return false;
+    });
 
 })(jQuery);
 

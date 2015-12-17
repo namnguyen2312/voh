@@ -164,7 +164,7 @@ h1, .h1, h2, .h2, h3, .h3 {
 	width: 24px;
 	height: 24px;
 	display: inline-block;
-	float:left;
+	float:right;
 }
 .slider-icon > a:after {
 	content: ' ';
@@ -173,7 +173,7 @@ h1, .h1, h2, .h2, h3, .h3 {
 	width: 24px;
 	height: 24px;
 	display: inline-block;
-	float:right;
+	float:left;
 	margin-right: 10px;
 } 
 

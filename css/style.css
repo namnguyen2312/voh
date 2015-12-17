@@ -36,6 +36,9 @@ img {
 .mgb10{
     margin-bottom:10px;
 }
+.mgb11{
+    margin-bottom:11px;
+}
 .mgb15{
     margin-bottom:15px;
 }
@@ -43,7 +46,7 @@ img {
     margin-bottom:6px;
 }
 .mgt10{
-    margin-top:20px;
+    margin-top:10px;
 }
 .mgt15{
     margin-top:15px;
@@ -103,6 +106,9 @@ h1#logo {
 
 #header-bot{
     background: none scroll 0 0 #aa2a2a;
+}
+.bodyxanh #header-bot{
+    background: none scroll 0 0 #01a3d4;
 }
 .container_in::before, .container_in::after, .mainnav::before, .mainnav::after{
     content: " ";
@@ -171,6 +177,16 @@ h1#logo {
     color: #fff;
     z-index: 9999;
     text-decoration: none;
+}
+.bodyxanh #dmenu li#home.active, .bodyxanh #dmenu li#home:hover, .bodyxanh #dmenu ul.mainnav li.level0.active > a, .bodyxanh #dmenu ul.mainnav li.level0:hover > a,
+.bodyxanh #user-wrap ul.mainnav li.level0.active > a, .bodyxanh #user-wrap ul.mainnav li.level0:hover > a {
+    background: #006599 none repeat scroll 0 0;
+    color: #fff;
+    z-index: 9999;
+    text-decoration: none;
+}
+#user-wrap ul.fontsmall li.level0 > a{
+    font-size: 95%;
 }
 /*Mobile menu*/
 #mmenu{
@@ -372,6 +388,10 @@ h1#logo {
     padding:10px 0;
     margin-top:20px;
 }
+.bodyxanh #footer{
+    background-color:#006599;
+    border-top: 3px solid #006599;
+}
 /*DATE PICKER*/
 .ui-widget-content{
     background-color: #f3f3f3;
@@ -501,7 +521,7 @@ th.ui-datepicker-week-end:first-child{
     border-image: block;
     border-style: solid;
     border-width: 2px 1px 1px;
-    display: block;
+    display: none;
     left: 0;
     right: 0;
     position: absolute;
@@ -585,6 +605,12 @@ th.ui-datepicker-week-end:first-child{
     margin-left: 10px;
     margin-right: 10px;
 }
+.menubox-slider {
+    width: 185px;
+    float: left;
+    margin-left: 10px;
+    margin-right: 10px;
+}
 /*hot news*/
 #hotnews{
     margin-top:10px;
@@ -614,6 +640,9 @@ a.fm {
 }
 a.fm:hover {
     color:#fff;
+}
+a.fm:first-child{
+    margin-left:0;
 }
 a.fm-hong {
     background-color: #ffa3a4;
@@ -673,6 +702,10 @@ a.fm-cam {
 }
 @media (max-width: 768px) {
     .hot-news-right {
+        
+    }
+	
+	#fmwrap{
         
     }
     .col-right{
@@ -756,4 +789,145 @@ a:hover {
 }
 .btn-color-green {
     background-color: #1F932E;
+}
+a.show-cat {
+    left: 160px;
+    margin-top: 8px;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    width: 20px;
+}
+span.plus {
+    background: transparent url("../images/plus-radio.png") no-repeat scroll 0 0;
+    display: block;
+    height: 17px;
+    width: 17px;
+}
+span.minus {
+    background: transparent url("../images/minus-radio.png") no-repeat scroll 0 8px;
+    height: 17px;
+    width: 17px;
+}
+a.active span.plus {
+    display: none;
+}
+a.active span.minus {
+    display: block;
+}
+.minus {
+    display: none;
+}
+ul.menu_lv2{
+    padding-left: 0;
+    position: relative;
+    top: 20px;
+    display:none;
+}
+#ul-radio .radio-chanel:first-child ul.menu_lv2{
+    display:block;
+}
+ul.menu_lv2 li{
+    background:url('../images/radio-list.png') no-repeat scroll 0 4px transparent;
+    padding:0 20px 15px;
+}
+.bodyxanh ul.menu_lv2 li{
+    background:url('../images/radio-list-blue.png') no-repeat scroll 0 4px transparent;
+    padding:0 20px 15px;
+}
+ul.menu_lv2 li a{
+    font-size:18px;
+    font-weight:bold;
+}
+.radio-chanel{
+    clear: both;
+    overflow: hidden;
+    position: relative;
+    margin-bottom:30px;
+}
+.radio-name{
+    border-bottom: 2px solid;
+    display: block;
+    font-size: 25px;
+    font-weight: bold;
+}
+.hrstyle{
+    border-top: 2px solid #0c0b0b;
+    margin-top:12px;
+}
+#ul-radio{
+    padding-left:0;
+}
+.h4title{
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: -10px;
+    text-transform: uppercase;
+}
+#search_block_top{
+    overflow: hidden;
+    position: relative;
+}
+#search_block_top::before, #search_block_top::after {
+    content: " ";
+    display: table;
+}
+.block_topsearch .form-search::before, .block_topsearch .form-search::after {
+    content: " ";
+    display: table;
+}
+#search_block_top #searchbox input {
+    background: #fff none repeat scroll 0 0;
+    border: 1px solid #ccc;    
+    color: #aaa;
+    float: right;
+    height: 38px;
+    padding: 4px 30px 4px 10px;
+    width: 100%;
+    max-width:230px;
+    font-style:italic;
+}
+#search_block_top #searchbox button.button {
+    background:url('../images/search.png') no-repeat scroll 8px 7px #772525;
+    border: medium none;
+    color: #fff;
+    font-size: 14px;
+    height: 100%;
+    padding: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 40px;
+    border-radius:0;
+}
+.lichphatsong{
+    padding-left:0;
+    margin-top:10px;
+    display:none;
+}
+#ul-radio .radio-chanel:first-child .lichphatsong{
+    display:block;
+}
+.lichphatsong table{
+    
+}
+.lichphatsong table th{
+    width:14.28%;
+    background-color:#772525;
+    color:#fff;
+    text-align:center;
+    border-bottom:none !important;
+}
+.bodyxanh .lichphatsong table th{    
+    background-color:#006599;    
+}
+.table-striped-column > tbody > tr td:nth-of-type(odd) {
+    background-color: #fffde1;
+}
+.table-striped-column > tbody > tr td:nth-of-type(even) {
+    background-color: #ffeab0;
+}
+.lichphatsong table td{
+   text-align:center;
+   vertical-align:middle !important;
 }
